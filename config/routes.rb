@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'help', to: 'help#index', as: 'help_index'
+  get 'about', to: 'about#index', as: 'about_index'
+  get 'events/index', to: redirect(status: 302, path: '/')
+  root 'events#index'
+  
 end
