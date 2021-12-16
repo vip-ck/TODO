@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :create do
   desc 'Создание роли'
   task role: :environment do
