@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Item.destroy_all
 Event.destroy_all
 User.destroy_all
@@ -27,4 +29,3 @@ hash_items = 200.times.map do
   }
 end
 Item.create! hash_items
-
