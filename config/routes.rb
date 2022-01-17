@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :events
+  get 'events/page/(:page(.:format))', to: 'events#index'
   get 'help', to: 'help#index', as: 'help_index'
   get 'about', to: 'about#index', as: 'about_index'
-  get 'events/index', to: redirect(status: 302, path: '/')
+  
   root 'events#index'
   
 end

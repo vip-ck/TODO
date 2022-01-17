@@ -12,9 +12,13 @@ html
     .wrapper
       header
         nav
-          = link_to_unless_current  "Главная", root_path, class: 'nav_link'
-          = link_to_unless_current  "Помощь", help_index_path, class: 'nav_link'
-          = link_to_unless_current  "О нас", about_index_path, class: 'nav_link'
+          ul
+            li 
+              = link_to_unless_current  "Главная", root_path, class: 'nav_link'
+            li 
+              = link_to_unless_current  "Помощь", help_index_path, class: 'nav_link'
+            li 
+              = link_to_unless_current  "О нас", about_index_path, class: 'nav_link'
       main
         = yield
       footer

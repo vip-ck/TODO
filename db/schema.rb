@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_213121) do
+ActiveRecord::Schema.define(version: 2022_01_17_203530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,9 @@ ActiveRecord::Schema.define(version: 2021_12_15_213121) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "role_id", comment: "Роль пользователя"
+    t.integer "events_count", default: 0, comment: "Счетчик дел"
+    t.integer "events_done_count", default: 0, comment: "Счетчик выполненных дел"
+    t.integer "events_not_done_count", default: 0, comment: "Счетчик невыполненных дел"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name", unique: true
   end
