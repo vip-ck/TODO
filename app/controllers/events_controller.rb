@@ -26,8 +26,8 @@ class EventsController < ApplicationController
 
   # POST /events
   def create
-    @event = Event.new(event_params.merge(user: User.first))
-
+    @event = Event.new(event_params)
+    @event.user_id = current_user.id
     if @event.save
       redirect_to @event, notice: 'Event was successfully created.'
     else
@@ -61,6 +61,6 @@ class EventsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def event_params
-    params.require(:event).permit(:name, :content, :done, :user)
+    params.require(:event).permit(:name, :content, :done)
   end
 end
