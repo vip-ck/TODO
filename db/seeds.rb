@@ -3,11 +3,24 @@
 Item.destroy_all
 Event.destroy_all
 User.destroy_all
+Role.destroy_all
+
+default_role = Role.create!(name: 'Пользователь', code: :default)
+admin_role = Role.create!(name: 'Администратор', code: :admin)
+
+email = 'admin@example.com'
+User.create! email: email,
+             password: email,
+             name: 'Администратор',
+             role: admin_role
 
 hash_users = 10.times.map do
+  email = FFaker::Internet.safe_email
   {
+    email: email,
+    password: email,
     name: FFaker::Internet.user_name[2...16],
-    email: FFaker::Internet.safe_email
+    role: default_role 
   }
 end
 

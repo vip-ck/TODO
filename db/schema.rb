@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_17_203530) do
+ActiveRecord::Schema.define(version: 2022_01_17_213415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,8 +53,18 @@ ActiveRecord::Schema.define(version: 2022_01_17_203530) do
     t.integer "events_count", default: 0, comment: "Счетчик дел"
     t.integer "events_done_count", default: 0, comment: "Счетчик выполненных дел"
     t.integer "events_not_done_count", default: 0, comment: "Счетчик невыполненных дел"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "events", "users"

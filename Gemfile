@@ -18,12 +18,16 @@ gem 'webpacker', '~> 5.0'
 # gem 'jbuilder', '~> 2.7'
 
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'devise'
 gem 'kaminari'
 gem 'slim-rails'
+gem 'devise-i18n'
+gem 'pundit'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'ffaker', '~> 2.20'
+  gem 'letter_opener'
 end
 
 group :development do

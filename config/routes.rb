@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :events
   get 'events/page/(:page(.:format))', to: 'events#index'
   get 'help', to: 'help#index', as: 'help_index'

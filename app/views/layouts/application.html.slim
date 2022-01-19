@@ -19,7 +19,9 @@ html
               = link_to_unless_current  "Помощь", help_index_path, class: 'nav_link'
             li 
               = link_to_unless_current  "О нас", about_index_path, class: 'nav_link'
+      = render 'shared/header'
       main
+        
         = yield
       footer
         p &copy; All rights reserved
