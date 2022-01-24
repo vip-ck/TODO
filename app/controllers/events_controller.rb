@@ -10,7 +10,7 @@ class EventsController < ApplicationController
   end
 
   # GET /events/1
-  def show 
+  def show
     authorize @event
   end
 

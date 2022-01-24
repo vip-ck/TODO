@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :trackable,
          :recoverable, :rememberable, :validatable
-  before_validation :set_role, on: %i[create update]       
+  before_validation :set_role, on: %i[create update]
   belongs_to :role
   has_many :events, dependent: :destroy
   validates :name, presence: true
@@ -17,12 +17,11 @@ class User < ApplicationRecord
   Role.find_each do |role|
     define_method "#{role.code}?" do
       role_id == role.id
-     end
+    end
   end
 
-
-
   private
+
   def set_role
     self.role ||= Role.find_by(code: :default)
   end

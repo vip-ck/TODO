@@ -19,10 +19,10 @@ gem 'webpacker', '~> 5.0'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
-gem 'kaminari'
-gem 'slim-rails'
 gem 'devise-i18n'
+gem 'kaminari'
 gem 'pundit'
+gem 'slim-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

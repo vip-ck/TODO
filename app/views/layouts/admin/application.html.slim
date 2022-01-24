@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title
+      | Система Администрирования
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_pack_tag 'application'
+  body
+    .wrapper
+      header
+        nav
+          ul
+            li 
+              = link_to_unless_current  "Главная", root_path, class: 'nav_link'
+            li 
+              = link_to_unless_current  "Помощь", help_index_path, class: 'nav_link'
+            li 
+              = link_to_unless_current  "О нас", about_index_path, class: 'nav_link'
+      main
+        
+        = yield
+      footer
+        p &copy; All rights reserved

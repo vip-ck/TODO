@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    root 'users#index'
+    resources :users
+  end
   devise_for :users
   resources :events
   get 'events/page/(:page(.:format))', to: 'events#index'

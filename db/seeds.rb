@@ -20,7 +20,7 @@ hash_users = 10.times.map do
     email: email,
     password: email,
     name: FFaker::Internet.user_name[2...16],
-    role: default_role 
+    role: default_role
   }
 end
 
