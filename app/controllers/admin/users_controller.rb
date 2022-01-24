@@ -8,7 +8,7 @@ module Admin
     # GET /admin/users
     def index
       authorize [:admin, User]
-      @admin_users = policy_scope(User, policy_scope_class: Admin::UserPolicy::Scope).all
+      @admin_users = policy_scope(User, policy_scope_class: Admin::UserPolicy::Scope).includes(:role).page(params[:page]).per(10)
     end
 
     # GET /admin/users/1

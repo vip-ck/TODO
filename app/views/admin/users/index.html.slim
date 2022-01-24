@@ -21,4 +21,7 @@ table
 
 br
 
-= link_to 'New User', new_admin_user_path
+p
+  = link_to 'New User', new_admin_user_path
+p
+  = paginate @admin_users
