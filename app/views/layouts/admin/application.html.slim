@@ -2,7 +2,7 @@ doctype html
 html
   head
     title
-      | TODO
+      | Система Администрирования
     meta[name="viewport" content="width=device-width,initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
@@ -12,17 +12,15 @@ html
     .wrapper
       header
         nav
-          ul.menu_list
-            li.menu_list 
+          ul
+            li 
               = link_to_unless_current  "Главная", root_path, class: 'nav_link'
-            li.menu_list 
+            li 
               = link_to_unless_current  "Помощь", help_index_path, class: 'nav_link'
-            li.menu_list 
+            li 
               = link_to_unless_current  "О нас", about_index_path, class: 'nav_link'
-      = render 'shared/header'
       main
         
         = yield
       footer
         p &copy; All rights reserved
-      

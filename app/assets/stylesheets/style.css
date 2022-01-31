@@ -22,12 +22,14 @@ footer {
   outline: 2px solid #1c5e22;
   padding: 15px;
 }
-nav {
+.menu_list {
   padding: 15px;
   display: flex;
   justify-content: space-around;
 }
+li{
+  list-style-type: none;
+}
 .nav_link {
-  display: block;
   text-decoration: none;
 }
