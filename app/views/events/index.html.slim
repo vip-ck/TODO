@@ -7,11 +7,7 @@ table
       th
       th
   tbody
-    - @events.each do |event|
-      tr
-        td = event.items.size
-        td = link_to event.name, event
-        td = link_to 'Edit', edit_event_path(event)
+    = render partial: 'event', collection: @events
         
 p
   = link_to 'New Event', new_event_path

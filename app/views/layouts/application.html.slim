@@ -12,12 +12,12 @@ html
     .wrapper
       header
         nav
-          ul
-            li 
+          ul.menu_list
+            li.menu_list 
               = link_to_unless_current  "Главная", root_path, class: 'nav_link'
-            li 
+            li.menu_list 
               = link_to_unless_current  "Помощь", help_index_path, class: 'nav_link'
-            li 
+            li.menu_list 
               = link_to_unless_current  "О нас", about_index_path, class: 'nav_link'
       = render 'shared/header'
       main
