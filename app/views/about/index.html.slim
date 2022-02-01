@@ -1,16 +1,20 @@
 h1
-  | О нас
+  = t(:about)
 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero repudiandae, est repellendus soluta consequatur officia quas quae nulla illo voluptate, omnis at&nbsp;a&nbsp;quisquam porro eaque neque unde error illum sit magnam obcaecati impedit inventore dolorem dolorum? Sapiente ipsum facilis debitis cumque aspernatur magni blanditiis veritatis reprehenderit commodi earum, quas ullam impedit, corrupti pariatur? Numquam reprehenderit, ab&nbsp;ratione hic, quibusdam adipisci quod dolore obcaecati aut incidunt, aliquam minus. Voluptates asperiores quis aliquam ipsa 
 p
-  | Текущая дата
-  =< current_date
+  = t(:current_date)
+  =< l Date.current
+p
+  = t(:visits)
+  =< session[:about_counter] 
 p
   = list_tag(%w[first second third]) 
   = image_tag("/tig.jpg", width: "700px")
 p
-  = link_to 'Главная страница', root_path
-p 
-  = link_to 'Помощь', help_index_path
+  => link_to t(:main_page), root_path
 
+p 
+  = link_to t(:help), help_index_path
+/== render 'shared/language_files'
 
 

@@ -97,6 +97,9 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+    kaminari-i18n (0.5.0)
+      kaminari
+      rails
     launchy (2.5.0)
       addressable (~> 2.7)
     letter_opener (1.7.0)
@@ -152,6 +155,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
+    rails-i18n (7.0.1)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (6.1.4.1)
       actionpack (= 6.1.4.1)
       activesupport (= 6.1.4.1)
@@ -222,6 +228,7 @@ DEPENDENCIES
   devise-i18n
   ffaker (~> 2.20)
   kaminari
+  kaminari-i18n
   letter_opener
   listen (~> 3.3)
   pg (~> 1.1)
@@ -229,6 +236,7 @@ DEPENDENCIES
   pundit
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.1)
+  rails-i18n
   sass-rails (>= 6)
   slim-rails
   tzinfo-data

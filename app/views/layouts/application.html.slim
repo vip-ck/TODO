@@ -14,11 +14,13 @@ html
         nav
           ul.menu_list
             li.menu_list 
-              = link_to_unless_current  "Главная", root_path, class: 'nav_link'
+              = link_to_unless_current  t(:main), root_path, class: 'nav_link'
             li.menu_list 
-              = link_to_unless_current  "Помощь", help_index_path, class: 'nav_link'
+              = link_to_unless_current  t(:help), help_index_path, class: 'nav_link'
             li.menu_list 
-              = link_to_unless_current  "О нас", about_index_path, class: 'nav_link'
+              = link_to_unless_current  t(:about), about_index_path, class: 'nav_link'
+            li.menu-list 
+                == render 'shared/language_files'
       = render 'shared/header'
       main
         
