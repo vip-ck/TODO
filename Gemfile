@@ -22,6 +22,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'kaminari'
 gem 'pundit'
+gem 'rails-i18n'
 gem 'slim-rails'
 
 group :development, :test do

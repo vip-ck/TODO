@@ -19,6 +19,9 @@ html
               = link_to_unless_current  "Помощь", help_index_path, class: 'nav_link'
             li.menu_list 
               = link_to_unless_current  "О нас", about_index_path, class: 'nav_link'
+            li.menu-list 
+                - link_name = session[:locale] == I18n.default_locale.to_s ? 'EN' : 'RU'
+                =< link_to link_name, toggle_path, method: :post
       = render 'shared/header'
       main
         

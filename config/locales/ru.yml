@@ -1,4 +1,13 @@
 ru:
+  date:
+    formats:
+      default:
+        '%d.%m.%Y'
+  help: Помощь
+  main_page: Главная страница
+  about: О нас
+  current_date: Текущая дата
+  visits: Визиты
   label:
     log_in: Вход
     log_out: Выход
