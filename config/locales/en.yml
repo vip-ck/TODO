@@ -3,6 +3,7 @@ en:
     formats:
       default:
         '%m/%d/%Y'
+  main: Main     
   help: Help
   main_page: Main Page
   about: About

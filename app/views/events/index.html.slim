@@ -1,5 +1,5 @@
-h1 Listing events
-
+h1 
+  = t(:events)
 table
   thead
     tr
@@ -10,6 +10,6 @@ table
     = render partial: 'event', collection: @events
         
 p
-  = link_to 'New Event', new_event_path
+  = link_to t(:new_event), new_event_path
 p
   = paginate @events
