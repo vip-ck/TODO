@@ -33,3 +33,10 @@ li{
 .nav_link {
   text-decoration: none;
 }
+a{
+  color: rgb(31, 155, 31);
+  text-decoration: none;
+}
+a:hover{
+  color: orange;
+}
