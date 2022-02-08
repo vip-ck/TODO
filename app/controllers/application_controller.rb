@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   def check_locale
     I18n.locale = session[:locale] if I18n.available_locales.include? session[:locale]&.to_sym
   end
-  
+
   def devise_permit_params
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])

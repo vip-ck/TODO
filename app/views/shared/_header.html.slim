@@ -1,17 +1,45 @@
 header
-  ul.menu_list
-    - if user_signed_in?
-      li
-        span
-          => t('label.hello') % current_user.name
-          |(
-          = link_to t('label.edit_profile'), edit_user_registration_path
-          |)
-      li
-        span
-          = link_to t('label.log_out'), destroy_user_session_path, method: :delete
-    - else
-      li
-        = link_to t('label.log_in'), new_user_session_path
-      li
-        = link_to t('label.registration'), new_user_registration_path
+  nav.navbar.navbar-expand-sm.bg-dark.navbar-light.border-bottom.border-success
+    .container-fluid.header_menu
+      ul.navbar-nav
+        li.nav-item
+          = link_to_unless_current  t(:main), root_path, class: 'nav_link'
+        li.nav-item
+          = link_to_unless_current  t(:help), help_index_path, class: 'nav_link'
+        li.nav-item
+          = link_to_unless_current  t(:about), about_index_path, class: 'nav_link'
+        
+      ul.navbar-nav
+        == render 'shared/language_files'
+      ul.navbar-nav
+        - if user_signed_in?
+          li.nav-item
+            span
+              => t('label.hello') % current_user.name
+              |(
+              = link_to t('label.edit_profile'), edit_user_registration_path
+              |)
+          li.nav-item
+            = link_to t('label.log_out'), destroy_user_session_path, method: :delete, class: 'nav_link'
+        - else
+          li.nav-item
+            = link_to t('label.log_in'), new_user_session_path
+          li.nav-item
+           = link_to t('label.registration'), new_user_registration_path
+
+  / ul.menu_list
+  /   - if user_signed_in?
+  /     li
+  /       span
+  /         => t('label.hello') % current_user.name
+  /         |(
+  /         = link_to t('label.edit_profile'), edit_user_registration_path
+  /         |)
+  /     li
+  /       span
+  /         = link_to t('label.log_out'), destroy_user_session_path, method: :delete
+  /   - else
+  /     li
+  /       = link_to t('label.log_in'), new_user_session_path
+  /     li
+  /       = link_to t('label.registration'), new_user_registration_path

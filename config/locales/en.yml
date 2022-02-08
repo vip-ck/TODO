@@ -10,3 +10,5 @@ en:
   current_date: Current date
   visits: Visits
   hello: "Hello world"
+  label:
+    hello: Hello, %s

@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
   # GET /events
   def index
-    @events = policy_scope(Event).includes(:items).page(params[:page]).per(3)
+    @events = policy_scope(Event).includes(:items).page(params[:page]).per(6)
   end
 
   # GET /events/1

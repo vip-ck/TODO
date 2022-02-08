@@ -21,10 +21,13 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 gem 'devise-i18n'
 gem 'kaminari'
+gem 'kaminari-i18n'
 gem 'pundit'
 gem 'rails-i18n'
 gem 'slim-rails'
-gem 'kaminari-i18n'
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'bootstrap5-kaminari-views'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
