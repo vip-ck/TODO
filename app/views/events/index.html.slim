@@ -1,15 +1,17 @@
-h1 
+h1.text-info.text-center 
   = t(:events)
-table
+table.table.table-dark.table-sm.table-striped 
   thead
     tr
-      th
-      th
-      th
+      th Подзадачи
+      th Задача
+      th Редактировать
   tbody
     = render partial: 'event', collection: @events
         
 p
-  = link_to t(:new_event), new_event_path
+  = link_to t(:new_event), new_event_path, class: "btn btn-info"
 p
-  = paginate @events
+  = paginate @events, theme: 'bootstrap-5',
+                      pagination_class: "pagination-sm flex-wrap justify-content-center",
+                      nav_class: "d-inline-block"
