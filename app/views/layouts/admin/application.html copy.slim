@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title
+      | TODO
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_pack_tag 'application'
+  body
+    .wrapper
+      = render 'shared/header'
+      main.bg-dark
+        
+        = yield
+      footer.bg-dark
+        p &copy; All rights reserved
+      
+      / header
+      /   nav
+      /     ul.menu_list
+      /       li.menu_list 
+      /         = link_to_unless_current  t(:main), root_path, class: 'nav_link'
+      /       li.menu_list 
+      /         = link_to_unless_current  t(:help), help_index_path, class: 'nav_link'
+      /       li.menu_list 
+      /         = link_to_unless_current  t(:about), about_index_path, class: 'nav_link'
+      /       li.menu-list 

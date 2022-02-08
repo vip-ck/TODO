@@ -10,17 +10,9 @@ html
     = javascript_pack_tag 'application'
   body
     .wrapper
-      header
-        nav
-          ul
-            li 
-              = link_to_unless_current  t(:main), root_path, class: 'nav_link'
-            li 
-              = link_to_unless_current  t(:help), help_index_path, class: 'nav_link'
-            li 
-              = link_to_unless_current  t(:about), about_index_path, class: 'nav_link'
-      main
+      = render 'shared/header'
+      main.bg-dark
         
         = yield
-      footer
+      footer.bg-dark
         p &copy; All rights reserved
