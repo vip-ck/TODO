@@ -27,19 +27,4 @@ header
           li.nav-item
            = link_to t('label.registration'), new_user_registration_path
 
-  / ul.menu_list
-  /   - if user_signed_in?
-  /     li
-  /       span
-  /         => t('label.hello') % current_user.name
-  /         |(
-  /         = link_to t('label.edit_profile'), edit_user_registration_path
-  /         |)
-  /     li
-  /       span
-  /         = link_to t('label.log_out'), destroy_user_session_path, method: :delete
-  /   - else
-  /     li
-  /       = link_to t('label.log_in'), new_user_session_path
-  /     li
-  /       = link_to t('label.registration'), new_user_registration_path
+ 
