@@ -18,12 +18,14 @@ gem 'bootstrap_form', '~> 5.0'
 gem 'devise'
 gem 'devise-i18n'
 gem 'font-awesome-rails'
+gem 'grape'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'pundit'
 gem 'rails-i18n'
 gem 'slim-rails'
+gem 'grape-entity'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
