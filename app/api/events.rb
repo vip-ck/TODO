@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Events < Grape::API
   helpers FiltersHelper, EventsHelper, Pundit
 
@@ -17,8 +19,8 @@ class Events < Grape::API
       end
 
       get '/' do
-      authorize @event, :show?
-      present  @event, with: Entities::Event
+        authorize @event, :show?
+        present @event, with: Entities::Event
       end
 
       post '/' do

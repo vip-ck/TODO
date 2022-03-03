@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Entities
   class User < Grape::Entity
     include ActionView::Helpers::TextHelper
@@ -5,7 +7,6 @@ module Entities
     expose :id, :name
     expose :role, using: 'Entities::Role' do |user, _|
       user.role
-end
-
-end
+    end
+  end
 end

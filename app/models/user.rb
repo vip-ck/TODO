@@ -33,7 +33,7 @@ class User < ApplicationRecord
       token = Devise.friendly_token
       break token unless User.where(authentication_token: token).first
     end
-  end  
+  end
 
   def set_role
     self.role ||= Role.find_by(code: :default)
