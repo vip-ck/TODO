@@ -1,5 +1,5 @@
 class Events < Grape::API
-  helpers FiltersHelper, EventsHelper
+  helpers FiltersHelper, EventsHelper, Pundit
 
   resource :events do
     desc 'Список дел'
@@ -7,7 +7,8 @@ class Events < Grape::API
       use :filters
     end
     get '/' do
-      present events_scope(params[:all]), with: Entities::EventIndex
+      scope = policy_scope(events_scope(params[:all]))
+      present scope, with: Entities::EventIndex
     end
 
     route_param :event_id, type: Integer do
@@ -16,6 +17,7 @@ class Events < Grape::API
       end
 
       get '/' do
+      authorize @event, :show?
       present  @event, with: Entities::Event
       end
 
