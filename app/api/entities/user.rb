@@ -2,9 +2,9 @@ module Entities
   class User < Grape::Entity
     include ActionView::Helpers::TextHelper
     root 'users', 'user'
-    expose :id, :name, :role
-def role
-  object.role.code
+    expose :id, :name
+    expose :role, using: 'Entities::Role' do |user, _|
+      user.role
 end
 
 end
