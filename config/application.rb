@@ -19,6 +19,7 @@ module TODO
     config.i18n.available_locales = %i[en ru]
     config.i18n.default_locale = :ru
     config.time_zone = 'Kyiv'
+    config.paths.add Rails.root.join('app', 'api', 'helpers').to_s, eager_load: true
     
     config.generators.system_tests = nil
   end
