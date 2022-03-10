@@ -28,6 +28,7 @@ gem 'rails-i18n'
 gem 'slim-rails'
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'ffaker', '~> 2.20'
   gem 'letter_opener'
