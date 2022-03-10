@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :mails do
   desc 'Рассылка письма о дедлайне событий'
   task event_deadline: :environment do
