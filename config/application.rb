@@ -10,6 +10,7 @@ require "action_view/railtie"
 require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
 
 module TODO
   class Application < Rails::Application
