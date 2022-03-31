@@ -25,6 +25,7 @@ set :output, error: 'log/cron_error.log', standard: 'log/cron.log'
 set :chronic_options, hours24: true
 #env 'MAILTO', 'admin@example.com'
 every 1.day do
-  rake 'touch:hello_from_whenever'
-  runner 'Hello.touch'
+  rake 'mails:event_deadline'
+  #rake 'touch:hello_from_whenever'
+  #runner 'Hello.touch'
 end
