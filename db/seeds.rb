@@ -30,6 +30,7 @@ hash_events = 20.times.map do
   {
     name: FFaker::HipsterIpsum.paragraph[3...20],
     content: FFaker::HipsterIpsum.paragraphs,
+    finished_at: (Time.now + rand(1..31).day),
     user_id: users.sample.id
   }
 end
