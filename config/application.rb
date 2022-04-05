@@ -10,6 +10,7 @@ require "action_view/railtie"
 require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
 
 module TODO
   class Application < Rails::Application
@@ -20,6 +21,7 @@ module TODO
     config.i18n.default_locale = :ru
     config.time_zone = 'Kyiv'
     config.paths.add Rails.root.join('app', 'api', 'helpers').to_s, eager_load: true
+    config.paths.add Rails.root.join('lib').to_s, eager_load: true
     
     config.generators.system_tests = nil
   end
