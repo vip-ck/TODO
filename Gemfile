@@ -29,6 +29,7 @@ gem 'rails-i18n'
 gem 'slim-rails'
 gem 'whenever', require: false
 gem 'dotenv-rails'
+gem 'resque'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
