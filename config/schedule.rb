@@ -28,4 +28,6 @@ every 1.day do
   rake 'mails:event_deadline'
   #rake 'touch:hello_from_whenever'
   #runner 'Hello.touch'
+  #RAILS_ENV=development whenever --update-crontab   абгрейд задачи крона
+  #whenever --update-crontab абгрейд задачи крона
 end

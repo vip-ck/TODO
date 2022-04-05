@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :touch do
   desc 'Создание файла hello_from_whenever.txt'
   task hello_from_whenever: :environment do
