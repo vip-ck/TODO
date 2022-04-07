@@ -26,15 +26,15 @@ gem 'kaminari'
 gem 'kaminari-i18n'
 gem 'pundit'
 gem 'rails-i18n'
+gem 'resque'
+gem 'resque-scheduler'
 gem 'slim-rails'
 gem 'whenever', require: false
-gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'ffaker', '~> 2.20'
   gem 'letter_opener'
-  
 end
 
 group :development do
